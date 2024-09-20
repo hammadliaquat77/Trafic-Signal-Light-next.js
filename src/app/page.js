@@ -1,101 +1,158 @@
-import Image from "next/image";
+
+// 'use client'
+
+// import { useEffect, useState } from "react";
+
+// export default function Home() {
+
+//    const [light, setLight] = useState('red')
+//    useEffect(()=> {
+
+//     const light = ['red', 'yellow', 'green']
+//      let index = 0
+
+//      const interval = setInterval(()=> {
+//       index = (index + 1) % light.length
+//       setLight(light[index])
+//      },3000)
+//      return ()=> clearInterval(interval);
+//    },[])
+
+//   return (
+//    <div>
+//     <div className="w-full h-screen flex justify-center flex-col items-center">
+//       <h1 className="mb-5 text-2xl font-semibold">Trafic Signal From Hammad Liaquat</h1>
+//        <div className="w-28 h-60 bg-black rounded-lg  flex justify-center items-center flex-col">
+//            <div className={`h-14 w-14 bg-gray-400 rounded-full m-2 ${light === 'red' ? 'bg-red-500' : 'bg-slate-400'}`}></div>         
+//            <div className={`h-14 w-14 bg-gray-400 rounded-full m-2 ${light === 'yellow' ? 'bg-yellow-500' : 'bg-slate-400'}`}></div>         
+//            <div className={`h-14 w-14 bg-gray-400 rounded-full m-2 ${light === 'green' ? 'bg-green-500' : 'bg-slate-400'}`}></div>         
+//        </div>
+//        <div className="h-[45vh] w-6 bg-black"></div>
+//        <div className="h-5 w-32 rounded-xl bg-black"></div>
+
+//     </div>
+//    </div>
+//   );
+// }
+ 
+
+
+
+
+
+
+
+
+
+
+
+// 'use client'
+
+// import { useEffect, useState } from "react";
+
+// export default function Home() {
+
+//    const [light, setLight] = useState('red')
+//    useEffect(()=> {
+
+//     const lights = ['red', 'yellow', 'green']
+//      let index = 0
+
+//      const interval = setInterval(()=> {
+//       index = (index + 1) % lights.length
+//       setLight(lights[index])
+//      }, 3000)
+//      return () => clearInterval(interval);
+//    }, [])
+
+//    // Function to display the message based on the light color
+//    const getMessage = (light) => {
+//      switch (light) {
+//        case 'red':
+//          return 'Stop';
+//        case 'yellow':
+//          return 'Ready';
+//        case 'green':
+//          return 'Go';
+//        default:
+//          return '';
+//      }
+//    }
+
+//   return (
+//    <div>
+//     <div className="w-full h-screen flex justify-center flex-col items-center">
+//       <h1 className="mb-5 text-2xl font-semibold">Trafic Signal From Hammad Liaquat</h1>
+//        <div className="w-28 h-60 bg-black rounded-lg  flex justify-center items-center flex-col">
+//            <div className={`h-14 w-14 bg-gray-400 rounded-full m-2 ${light === 'red' ? 'bg-red-500' : 'bg-slate-400'}`}></div>         
+//            <div className={`h-14 w-14 bg-gray-400 rounded-full m-2 ${light === 'yellow' ? 'bg-yellow-500' : 'bg-slate-400'}`}></div>         
+//            <div className={`h-14 w-14 bg-gray-400 rounded-full m-2 ${light === 'green' ? 'bg-green-500' : 'bg-slate-400'}`}></div>         
+//        </div>
+//        <div className="text-xl font-bold absolute ml-56 -mt-96">
+//          {/* Display the message based on the light color */}
+//          {getMessage(light)}
+//        </div>
+//        <div className="h-[45vh] w-6 bg-black"></div>
+//        <div className="h-5 w-32 rounded-xl bg-black"></div>
+//     </div>
+//    </div>
+//   );
+// }
+
+
+
+
+
+
+
+
+
+'use client'
+
+import { useEffect, useState } from "react";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+   const [light, setLight] = useState('red')
+   useEffect(()=> {
+
+    const lights = ['red', 'yellow', 'green']
+     let index = 0
+
+     const interval = setInterval(()=> {
+      index = (index + 1) % lights.length
+      setLight(lights[index])
+     }, 3000)
+     return () => clearInterval(interval);
+   }, [])
+
+  return (
+   <div>
+    <div className="w-full h-screen flex justify-center flex-col items-center">
+      <h1 className="mb-5 text-2xl font-semibold">Traffic Signal From Hammad Liaquat</h1>
+       <div className="w-28 h-60 bg-black rounded-lg relative flex justify-center items-center flex-col">
+           <div className="flex justify-center items-center">
+             <div className={`h-14 w-14 bg-gray-400 rounded-full m-2 ${light === 'red' ? 'bg-red-500' : 'bg-slate-400'}`}></div> 
+             <div className="ml-56 absolute text-2xl font-bold">
+               {light === 'red' && 'Stop'}
+             </div>
+           </div>
+           <div className="flex justify-center items-center">
+             <div className={`h-14 w-14 bg-gray-400 rounded-full m-2 ${light === 'yellow' ? 'bg-yellow-500' : 'bg-slate-400'}`}></div>
+             <div className="ml-56 absolute text-2xl font-bold">
+               {light === 'yellow' && 'Ready'}
+             </div>
+           </div>
+           <div className="flex justify-center items-center">
+             <div className={`h-14 w-14 bg-gray-400 rounded-full m-2 ${light === 'green' ? 'bg-green-500' : 'bg-slate-400'}`}></div>         
+             <div className="ml-56 absolute text-3xl font-bold">
+               {light === 'green' && 'Go'}
+             </div>
+           </div>
+       </div>
+       <div className="h-[45vh] w-6 bg-black"></div>
+       <div className="h-5 w-32 rounded-xl bg-black"></div>
     </div>
+   </div>
   );
 }
